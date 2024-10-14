@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  airAcceleration: 0.025
   groundAcceleration: 0.1
+  airAcceleration: 0.025
   gravity: 1.8
   maxSpeed: 5
   maxFallSpeed: 5
@@ -731,7 +731,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 10.04
+  m_Range: 10.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
