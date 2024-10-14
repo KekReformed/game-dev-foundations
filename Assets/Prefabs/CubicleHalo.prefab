@@ -54,6 +54,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.013
+      objectReference: {fileID: 0}
     - target: {fileID: 6356882532030376879, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.66
@@ -163,6 +171,14 @@ PrefabInstance:
     - target: {fileID: 4601091222425042549, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.898
       objectReference: {fileID: 0}
     - target: {fileID: 7060557159910317068, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
       propertyPath: m_LocalPosition.x
@@ -324,6 +340,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6739315117910117796}
     m_Modifications:
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118555001039119300, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.678
+      objectReference: {fileID: 0}
     - target: {fileID: 6356882532030376879, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6240001

@@ -982,6 +982,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubicleHalo
       objectReference: {fileID: 0}
+    - target: {fileID: 3814512815386906289, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814512815386906289, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.678
+      objectReference: {fileID: 0}
     - target: {fileID: 6739315117910117796, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1025,6 +1033,22 @@ PrefabInstance:
     - target: {fileID: 6739315117910117796, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723522998692672225, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723522998692672225, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044064892226735331, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044064892226735331, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.898
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb2852f7f6c14a4fa9584b9ae5af152, type: 3}
