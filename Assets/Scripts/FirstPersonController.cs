@@ -30,12 +30,13 @@ public class FirstPersonController : MonoBehaviour
     void Update()
     {
         grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
-
+        
         //Acceleration & deceleration
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             if (grounded) velocity.x += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
             else velocity.x += airAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
+            //Apply the rotation to the velocity
         }
         else if (grounded)
         {
@@ -65,10 +66,9 @@ public class FirstPersonController : MonoBehaviour
         velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed);
         velocity.y = Mathf.Clamp(velocity.y, -maxFallSpeed, 999);
         velocity.z = Mathf.Clamp(velocity.z, -maxSpeed, maxSpeed);
-
-        //Apply the rotation to the velocity
+        
         Vector3 move = transform.rotation * velocity;
-
+        
         controller.Move(move * Time.deltaTime);
     }
 }
