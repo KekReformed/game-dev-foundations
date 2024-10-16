@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354311324347833174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.82552636, y: -2.6752717, z: -0.86}
-  m_LocalScale: {x: -2.1, y: 1, z: 1.2}
+  m_LocalPosition: {x: 4.784, y: -2.6752717, z: -0.874}
+  m_LocalScale: {x: 1.36, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8516849293444890526}
@@ -322,8 +322,8 @@ GameObject:
   - component: {fileID: 8516849293444890526}
   - component: {fileID: 1042238408980645522}
   - component: {fileID: 5609406310369156438}
-  - component: {fileID: 4740946701908039349}
-  m_Layer: 3
+  - component: {fileID: 6750138460656862047}
+  m_Layer: 0
   m_Name: pCube83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,8 +338,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6920606949015879540}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.46, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1837655933266346476}
@@ -352,7 +352,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6920606949015879540}
-  m_Mesh: {fileID: 1707748050733218952, guid: cbab8a7eca57a8a46a8ac221f7bbcff9, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 2d33037995b78e14694dc7dd95e2c728, type: 3}
 --- !u!23 &5609406310369156438
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8370087718865711363, guid: cbab8a7eca57a8a46a8ac221f7bbcff9, type: 3}
+  - {fileID: -3033667219593020291, guid: 2d33037995b78e14694dc7dd95e2c728, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,7 +395,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4740946701908039349
+--- !u!64 &6750138460656862047
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,7 +408,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1707748050733218952, guid: cbab8a7eca57a8a46a8ac221f7bbcff9, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 2d33037995b78e14694dc7dd95e2c728, type: 3}
 --- !u!1 &7117877407368280046
 GameObject:
   m_ObjectHideFlags: 0

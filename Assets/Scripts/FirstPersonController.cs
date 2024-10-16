@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -29,8 +26,10 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
-        
+
+        //Grounded check, used for jumping and gravity, make sure that if we are moving up that we can't be grounded otherwise we'll get stuck in the floor
+        grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer) && velocity.y <= 0;
+
         //Acceleration & deceleration
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
@@ -61,14 +60,14 @@ public class FirstPersonController : MonoBehaviour
         if (!grounded) velocity.y += gravity * -9.81f * Time.deltaTime;
         if (grounded) velocity.y = 0f;
 
-        if (Input.GetButton("Jump") && grounded) velocity.y = jumpHeight;
+        if (Input.GetButtonDown("Jump") && grounded) velocity.y = jumpHeight;
 
         velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed);
         velocity.y = Mathf.Clamp(velocity.y, -maxFallSpeed, 999);
         velocity.z = Mathf.Clamp(velocity.z, -maxSpeed, maxSpeed);
-        
+
         Vector3 move = transform.rotation * velocity;
-        
+
         controller.Move(move * Time.deltaTime);
     }
 }
