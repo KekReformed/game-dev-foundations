@@ -60,7 +60,7 @@ public class FirstPersonController : MonoBehaviour
         if (!grounded) velocity.y += gravity * -9.81f * Time.deltaTime;
         if (grounded) velocity.y = 0f;
 
-        if (Input.GetButtonDown("Jump") && grounded) velocity.y = jumpHeight;
+        if (InputManager.instance.inputs["Jump"].pressed && grounded) velocity.y = jumpHeight;
 
         velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed);
         velocity.y = Mathf.Clamp(velocity.y, -maxFallSpeed, 999);
