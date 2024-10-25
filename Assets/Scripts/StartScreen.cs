@@ -17,8 +17,7 @@ public class StartScreen : MonoBehaviour
     }
     public void BackOptions()
     {
-        StartCamera.enabled = true;
-        OptionsCamera.enabled = false;
+       
     }
     public void QuitGame()
     {
