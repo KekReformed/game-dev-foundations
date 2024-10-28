@@ -152,7 +152,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-434586
+  m_Name: pb_Mesh51338
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -457,7 +457,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-24616
+  m_Name: pb_Mesh51096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsPaused: 0
-  controller: {fileID: 0}
+  controller: {fileID: 1336499015}
   PausePanel: {fileID: 949337677}
 --- !u!114 &174544743
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-463582
+  m_Name: pb_Mesh51296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7931,7 +7931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1335946542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 174544742}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1335946542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7970,6 +7982,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335946539}
   m_CullTransparentMesh: 1
+--- !u!143 &1336499015 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8861415337973652128, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
+  m_PrefabInstance: {fileID: 2056685001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1347128205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7928215627320230514, guid: e9b987ffb3e2b7c49808ffe1e817bf49, type: 3}
@@ -9149,7 +9166,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48606
+  m_Name: pb_Mesh51136
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9947,7 +9964,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-464634
+  m_Name: pb_Mesh51214
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10472,17 +10489,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 740955764, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
-      propertyPath: triggerLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 8861415337973652059, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861415337973652128, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8861415337973652129, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
       propertyPath: m_RootOrder

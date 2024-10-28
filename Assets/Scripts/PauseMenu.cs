@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class PauseMenu : MonoBehaviour
             PauseGame();       
         }
 
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+        }
+
     }
     public void PauseGame()
     {
@@ -32,6 +39,7 @@ public class PauseMenu : MonoBehaviour
             PausePanel.SetActive(true);
             controller.enabled = false;
             Time.timeScale = 0;
+            Camera.main.gameObject.SetActive(false);
         }
         else
         {
@@ -39,6 +47,12 @@ public class PauseMenu : MonoBehaviour
             PausePanel.SetActive(false);
             controller.enabled = true;
             Time.timeScale = 1;
+            Camera.main.gameObject.SetActive(false);
         }
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
