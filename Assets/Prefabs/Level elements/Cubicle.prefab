@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837655933266346476}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cubicle walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5272321018405954886}
   - component: {fileID: 8651052222866162130}
   - component: {fileID: 7928215627843665370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1042238408980645522}
   - component: {fileID: 5609406310369156438}
   - component: {fileID: 6750138460656862047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7605479600499895636}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: monitor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7605479600326955604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: table(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7928215627320230514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cubicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7928215627320230515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.10552633, y: 2.6752717, z: 3.0235515}
+  m_LocalPosition: {x: -0.10552633, y: 3, z: 3.0235515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -726,6 +726,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c1a7243db69766c49ae840d993dc4424, type: 3}
       propertyPath: m_Name
       value: mouse1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1a7243db69766c49ae840d993dc4424, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: c1a7243db69766c49ae840d993dc4424, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a7243db69766c49ae840d993dc4424, type: 3}
