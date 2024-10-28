@@ -1210,7 +1210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832b41ec9e364c4438b1c04a3092fa9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 120
+  startTime: 60
+  sceneToLoad: StartMenu
   timerText: {fileID: 1860210040}
 --- !u!4 &796353812
 Transform:

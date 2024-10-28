@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
     //Has timer started
     bool timerStarted;
 
+    [SerializeField] string sceneToLoad;
+
     //ref var for TMPro text
     [SerializeField] TMP_Text timerText;
 
@@ -28,6 +30,10 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            timerStarted = true;
+        }
         if (timerStarted)
         {
             //subtracting timer durtation 
@@ -38,13 +44,14 @@ public class Timer : MonoBehaviour
                 Debug.Log("Timer Reached Zero");
                 timerStarted = false;
                 currentTime = 0;
-                SceneManager.LoadScene("StartScreen");
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene(sceneToLoad);
             }
             timerText.text = currentTime.ToString("f0");
         }
     }
-    
-    void TimerStart()
+    //command for the timer
+     void TimerStart()
     {
         timerStarted = true;
     }
