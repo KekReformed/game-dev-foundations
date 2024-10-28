@@ -9,7 +9,7 @@ public class StartScreen : MonoBehaviour
     public Camera OptionsCamera;
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Probuild Test");
     }
     public void Options()
     {

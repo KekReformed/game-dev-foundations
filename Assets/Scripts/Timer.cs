@@ -43,6 +43,7 @@ public class Timer : MonoBehaviour
             timerText.text = currentTime.ToString("f0");
         }
     }
+    
     void TimerStart()
     {
         timerStarted = true;
