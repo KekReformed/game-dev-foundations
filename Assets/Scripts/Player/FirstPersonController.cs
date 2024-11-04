@@ -17,6 +17,7 @@ public class FirstPersonController : MonoBehaviour
     public float groundCheckRadius;
 
     public LayerMask groundLayer;
+    bool _freeze;
 
     // Start is called before the first frame update
     void Start()
@@ -27,56 +28,102 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (_freeze) return;
         //Grounded check, used for jumping and gravity, make sure that if we are moving up that we can't be grounded otherwise we'll get stuck in the floor
         grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer) && move.y <= 0;
 
         //Acceleration & deceleration
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            if (grounded) inputVelocity.x += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
-            else inputVelocity.x += airAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
+            if (grounded)
+            {
+                inputVelocity.x += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
+            }
+            else
+            {
+                inputVelocity.x += airAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
+            }
             //Apply the rotation to the velocity
         }
         else if (grounded)
         {
             //Make sure we don't overshoot when doing deceleration 
-            if (Mathf.Sign(move.x - groundAcceleration * Mathf.Sign(move.x)) != Mathf.Sign(move.x)) move.x = 0f;
-            else move.x -= groundAcceleration * Mathf.Sign(move.x);
+            if (Mathf.Sign(move.x - groundAcceleration * Mathf.Sign(move.x)) != Mathf.Sign(move.x))
+            {
+                move.x = 0f;
+            }
+            else
+            {
+                move.x -= groundAcceleration * Mathf.Sign(move.x);
+            }
 
             inputVelocity.x = 0;
         }
 
         if (Input.GetAxisRaw("Vertical") != 0)
         {
-            if (grounded) inputVelocity.z += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Vertical"));
-            else inputVelocity.z += airAcceleration * Mathf.Sign(Input.GetAxisRaw("Vertical"));
+            if (grounded)
+            {
+                inputVelocity.z += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Vertical"));
+            }
+            else
+            {
+                inputVelocity.z += airAcceleration * Mathf.Sign(Input.GetAxisRaw("Vertical"));
+            }
         }
         else if (grounded)
         {
             //Make sure we don't overshoot when doing deceleration 
-            if (Mathf.Sign(move.z - groundAcceleration * Mathf.Sign(move.z)) != Mathf.Sign(move.z)) move.z = 0f;
-            else move.z -= groundAcceleration * Mathf.Sign(move.z);
+            if (Mathf.Sign(move.z - groundAcceleration * Mathf.Sign(move.z)) != Mathf.Sign(move.z))
+            {
+                move.z = 0f;
+            }
+            else
+            {
+                move.z -= groundAcceleration * Mathf.Sign(move.z);
+            }
 
             inputVelocity.z = 0;
         }
 
 
-        if (!grounded) move.y += gravity * -9.81f * Time.deltaTime;
-        if (grounded) move.y = 0f;
+        if (!grounded)
+        {
+            move.y += gravity * -9.81f * Time.deltaTime;
+        }
+        if (grounded)
+        {
+            move.y = 0f;
+        }
 
-        if (InputManager.instance.inputs["Jump"].pressed && grounded) move.y = jumpHeight;
+        if (InputManager.instance.inputs["Jump"].pressed && grounded)
+        {
+            move.y = jumpHeight;
+        }
 
         inputVelocity = clampVector(inputVelocity);
 
         //Don't let the input velocity mess with our y vector, this could be done without a temp variable of course but it looks significantly worse
         float tempMoveY = move.y;
 
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) move = transform.rotation * inputVelocity;
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            move = transform.rotation * inputVelocity;
+        }
 
         move.y = tempMoveY;
 
         controller.Move(move * Time.deltaTime);
+    }
+
+    public void Freeze()
+    {
+        _freeze = true;
+    }
+
+    public void Unfreeze()
+    {
+        _freeze = false;
     }
 
     Vector3 clampVector(Vector3 vectorToClamp)
