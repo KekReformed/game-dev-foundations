@@ -33,7 +33,6 @@ public class DialogueManager : MonoBehaviour
                 _displaying = false;
                 dialogueObject.SetActive(false);
             }
-            Debug.Log(_dialogueTimer);
         }
     }
 
