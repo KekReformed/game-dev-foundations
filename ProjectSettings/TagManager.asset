@@ -8,6 +8,7 @@ TagManager:
   - PauseMenuUI
   - Item
   - Key
+  - NotepadPopup
   layers:
   - Default
   - TransparentFX

@@ -1,28 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer instance;
     //Start time value
     [SerializeField] float startTime;
 
+    [SerializeField] string sceneToLoad;
+
+    //ref var for TMPro text
+    [SerializeField] TMP_Text timerText;
     //Current Time
     float currentTime;
 
     //Has timer started
     bool timerStarted;
 
-    [SerializeField] string sceneToLoad;
-
-    //ref var for TMPro text
-    [SerializeField] TMP_Text timerText;
-
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null) instance = this;
+
         currentTime = startTime;
         timerText.text = currentTime.ToString();
     }
@@ -51,7 +51,17 @@ public class Timer : MonoBehaviour
         }
     }
     //command for the timer
-     void TimerStart()
+    void TimerStart()
+    {
+        timerStarted = true;
+    }
+
+    public void PauseTimer()
+    {
+        timerStarted = false;
+    }
+
+    public void UnpauseTimer()
     {
         timerStarted = true;
     }

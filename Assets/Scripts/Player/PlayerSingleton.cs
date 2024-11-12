@@ -5,6 +5,7 @@ public class PlayerSingleton : MonoBehaviour
     public static PlayerSingleton main;
     public FirstPersonController controller;
     public RotateTowardsMouse mouseLook;
+    public Interact interact;
     void Awake()
     {
         if (main == null)
@@ -13,5 +14,6 @@ public class PlayerSingleton : MonoBehaviour
         }
         controller = gameObject.GetComponent<FirstPersonController>();
         mouseLook = gameObject.GetComponent<RotateTowardsMouse>();
+        interact = gameObject.GetComponentInChildren<Interact>();
     }
 }
