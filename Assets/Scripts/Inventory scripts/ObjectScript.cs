@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectScript : MonoBehaviour
 {
+    public bool isCollected;
     // Start is called before the first frame update
     void Start()
     {

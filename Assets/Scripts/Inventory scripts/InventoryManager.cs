@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public Dictionary<string,ItemData> InventoryDictionary = new Dictionary<string, ItemData>();
+
     public ItemData[] items;
     public Dictionary<string, ItemData> InventoryDictionary;
 
@@ -12,16 +14,26 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < InventoryDictionary.Count; i++)
         {
             ItemData item = items[i];
+            
+            InventoryDictionary.Add(item.id, item);     
 
-            InventoryDictionary.Add(item.id, item);
-
+            Debug.Log(item.itemName); 
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        ItemData idk = InventoryDictionary["DoorKey"];
-        ItemData eh = InventoryDictionary["DoorKey"];
+        var id = InventoryDictionary["DoorKey"];
+
+        //Debug.Log(id.itemName);
+
+        foreach (KeyValuePair<string, ItemData> i in InventoryDictionary)
+        {
+            //do something with entry.Value or entry.Key
+
+        }
     }
+
+    
 }
