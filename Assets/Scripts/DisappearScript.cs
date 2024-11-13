@@ -10,7 +10,7 @@ public class DisappearScript : MonoBehaviour
         if (seen)
         {
             gameObject.SetActive(false);
-            if (disappearText != "") DialogueManager.instance.SetDialogue(disappearText);
+            if (disappearText != "") UIManager.instance.SetDialogue(disappearText);
         }
     }
 }

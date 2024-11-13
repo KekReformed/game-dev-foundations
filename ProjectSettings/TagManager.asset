@@ -9,6 +9,8 @@ TagManager:
   - Item
   - Key
   - NotepadPopup
+  - Page 1
+  - Page 2
   layers:
   - Default
   - TransparentFX

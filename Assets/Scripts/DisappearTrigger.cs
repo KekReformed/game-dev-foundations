@@ -10,7 +10,7 @@ public class DisappearTrigger : MonoBehaviour
     {
         if (_seen) return;
         _disappearScript.seen = true;
-        DialogueManager.instance.SetDialogue(seenDialogue);
+        UIManager.instance.SetDialogue(seenDialogue);
         _seen = true;
     }
 }

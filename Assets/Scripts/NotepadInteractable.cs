@@ -14,9 +14,9 @@ public class NotepadInteractable : Interactable
 
     void Start()
     {
-        _notePad = GameObject.FindGameObjectWithTag("NotepadPopup");
-        _page1 = GameObject.Find("Page 1").GetComponent<TMP_Text>();
-        _page2 = GameObject.Find("Page 2").GetComponent<TMP_Text>();
+        _notePad = UIManager.instance.notePadUI;
+        _page1 = UIManager.instance.page1;
+        _page2 = UIManager.instance.page2;
         _notePad.SetActive(false);
     }
 
@@ -29,7 +29,7 @@ public class NotepadInteractable : Interactable
 
             if (!read && closeDialogue != "")
             {
-                DialogueManager.instance.SetDialogue(closeDialogue, 4f);
+                UIManager.instance.SetDialogue(closeDialogue, 4f);
                 read = true;
             }
 

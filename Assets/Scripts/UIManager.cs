@@ -1,10 +1,13 @@
 using TMPro;
 using UnityEngine;
 
-public class DialogueManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public static DialogueManager instance;
+    public static UIManager instance;
     [SerializeField] GameObject dialogueObject;
+    public GameObject notePadUI;
+    public TMP_Text page1;
+    public TMP_Text page2;
     float _dialogueTimeMax;
     float _dialogueTimer;
     bool _displaying;
@@ -15,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = gameObject.GetComponent<DialogueManager>();
+            instance = gameObject.GetComponent<UIManager>();
         }
 
         text = dialogueObject.GetComponent<TMP_Text>();

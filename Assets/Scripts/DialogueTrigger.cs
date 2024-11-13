@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!_dialogueTriggered || canTriggerMultipleTimes)
         {
-            DialogueManager.instance.SetDialogue(_dialogue);
+            UIManager.instance.SetDialogue(_dialogue);
             _dialogueTriggered = true;
         }
     }
