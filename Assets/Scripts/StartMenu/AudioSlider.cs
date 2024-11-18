@@ -9,6 +9,11 @@ public class AudioSlider : MonoBehaviour
     [SerializeField] private TMP_Text ValueText;
     [SerializeField] private AudioMixMode MixMode; 
 
+    private void start()
+    {
+        Mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("Volume", 1) * 20));
+    }
+
     public void OnChangeSLider(float Value)
     {
         ValueText.SetText($"{Value.ToString("f1")}");
@@ -28,7 +33,11 @@ public class AudioSlider : MonoBehaviour
         }
     }
 
-
+    void update()
+    {
+        PlayerPrefs.SetFloat("Volume", Value);
+        PlayerPrefs.Save();
+    }
 
 
 
