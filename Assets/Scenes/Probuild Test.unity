@@ -15604,6 +15604,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7708458829507051877, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7518164076559309981, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -5098886679754682624, guid: 539771846293a664caacd8176e4c81db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15620,18 +15628,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: eb164ee789a59664d946f135579cb4ef, type: 2}
+    - target: {fileID: -2449591585237940907, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -59831862536594041, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 539771846293a664caacd8176e4c81db, type: 3}
       propertyPath: m_Name
       value: memory notepad room
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1347949554999236484, guid: 539771846293a664caacd8176e4c81db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 83a58d356bc4fb641bc603d40996354d, type: 2}
+    - target: {fileID: 2997667772773424828, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3204718938810936897, guid: 539771846293a664caacd8176e4c81db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: eb164ee789a59664d946f135579cb4ef, type: 2}
+    - target: {fileID: 8832976274423491612, guid: 539771846293a664caacd8176e4c81db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539771846293a664caacd8176e4c81db, type: 3}
 --- !u!4 &2055666439 stripped
@@ -15708,6 +15736,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8861415337973652131, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
       propertyPath: groundCheckRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861415337973652131, guid: d84eae82c95e5f34f99ed2418df0d8a4, type: 3}
+      propertyPath: groundAcceleration
       value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []

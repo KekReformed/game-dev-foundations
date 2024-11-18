@@ -17,7 +17,7 @@ public class StartScreen : MonoBehaviour
     }
     public void BackOptions()
     {
-       Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSdFfG1cVGgsqo3wc2KUr7FlQ3ZlpJfkWB4UuJYxD2NyS6VNTA/viewform?usp=sf_link");
+       Application.OpenURL("https://forms.gle/xKTHp8NQBYn4YHBM6");
     }
     public void QuitGame()
     {
