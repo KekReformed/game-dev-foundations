@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class DoorInteractable : Interactable
 {
+    [SerializeField] bool Locked;
+    [SerializeField] string key;
     Animator _animator;
     bool openState;
+
 
     void Awake()
     {
@@ -13,7 +16,14 @@ public class DoorInteractable : Interactable
 
     public override void Interact()
     {
-        Open();
+        if (!Locked || InventoryManagerTemp.main.Keys.Contains(key))
+        {
+            Open();
+        }
+        else
+        {
+            UIManager.instance.SetDialogue("Looks like its locked.");
+        }
     }
 
     public void Open()
