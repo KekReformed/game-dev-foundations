@@ -12,8 +12,11 @@ public class Timer : MonoBehaviour
 
     //ref var for TMPro text
     [SerializeField] TMP_Text timerText;
+
+    public GameObject endScreen;
+
     //Current Time
-    float currentTime;
+    public float currentTime;
 
     //Has timer started
     bool timerStarted;
@@ -41,14 +44,15 @@ public class Timer : MonoBehaviour
             //logic if time reach 0
             if (currentTime <= 0)
             {
-                Debug.Log("Timer Reached Zero");
                 timerStarted = false;
                 currentTime = 0;
-                Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene(sceneToLoad);
+                PlayerSingleton.main.mouseLook.Freeze();
+                PlayerSingleton.main.controller.Freeze();
+                endScreen.SetActive(true);
             }
             timerText.text = currentTime.ToString("f0");
         }
+        if (Input.GetKeyDown(KeyCode.F) && currentTime == 0) SceneManager.LoadScene(0);
     }
     //command for the timer
     void TimerStart()

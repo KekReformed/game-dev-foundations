@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -17,17 +18,31 @@ public class FirstPersonController : MonoBehaviour
     public float groundCheckRadius;
 
     public LayerMask groundLayer;
+
+    public GameObject endScreen;
     bool _freeze;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //End Sequence for good ending
+        if (transform.position.y < -30)
+        {
+            endScreen.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F)) SceneManager.LoadScene(0);
+            Freeze();
+            PlayerSingleton.main.mouseLook.Freeze();
+            Timer.instance.currentTime = 99999f;
+        }
+
         if (_freeze) return;
         //Grounded check, used for jumping and gravity, make sure that if we are moving up that we can't be grounded otherwise we'll get stuck in the floor
         grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer) && move.y <= 0;
@@ -38,6 +53,7 @@ public class FirstPersonController : MonoBehaviour
             if (grounded)
             {
                 inputVelocity.x += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Horizontal"));
+                if (!audio.isPlaying) audio.Play();
             }
             else
             {
@@ -65,6 +81,7 @@ public class FirstPersonController : MonoBehaviour
             if (grounded)
             {
                 inputVelocity.z += groundAcceleration * Mathf.Sign(Input.GetAxisRaw("Vertical"));
+                if (!audio.isPlaying) audio.Play();
             }
             else
             {
@@ -90,7 +107,9 @@ public class FirstPersonController : MonoBehaviour
         if (!grounded)
         {
             move.y += gravity * -9.81f * Time.deltaTime;
+            audio.Stop();
         }
+
         if (grounded)
         {
             move.y = 0f;
@@ -109,6 +128,11 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
             move = transform.rotation * inputVelocity;
+        }
+
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            audio.Stop();
         }
 
         move.y = tempMoveY;

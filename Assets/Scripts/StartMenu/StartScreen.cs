@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
@@ -13,14 +11,14 @@ public class StartScreen : MonoBehaviour
     }
     public void Options()
     {
-       
+
     }
     public void BackOptions()
     {
-       Application.OpenURL("https://forms.gle/xKTHp8NQBYn4YHBM6");
+        Application.OpenURL("https://forms.gle/xKTHp8NQBYn4YHBM6");
     }
     public void QuitGame()
     {
-        //Application.Quit;
+        Application.Quit();
     }
 }

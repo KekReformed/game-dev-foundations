@@ -5,6 +5,7 @@ public class DoorInteractable : Interactable
     [SerializeField] bool Locked;
     [SerializeField] string key;
     Animator _animator;
+    AudioSource audio;
     bool openState;
 
 
@@ -12,6 +13,7 @@ public class DoorInteractable : Interactable
     {
         _animator = gameObject.GetComponentInParent<Animator>();
         _animator.SetBool("Open", openState);
+        audio = gameObject.GetComponentInParent<AudioSource>();
     }
 
     public override void Interact()
@@ -19,6 +21,7 @@ public class DoorInteractable : Interactable
         if (!Locked || InventoryManagerTemp.main.Keys.Contains(key))
         {
             Open();
+            audio.Play();
         }
         else
         {

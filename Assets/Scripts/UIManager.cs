@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     float _dialogueTimeMax;
     float _dialogueTimer;
     bool _displaying;
+    readonly Color himColor = Color.cyan;
+    readonly Color playerColor = Color.white;
     TMP_Text text;
 
 
@@ -39,7 +41,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void SetDialogue(string dialogue, float time = 2f)
+    public void SetDialogue(string dialogue, float time = 2f, bool player = true)
     {
         text.SetText(dialogue);
         dialogueObject.SetActive(true);
@@ -47,5 +49,14 @@ public class UIManager : MonoBehaviour
         _dialogueTimer = 0f;
         _dialogueTimeMax = time;
         _displaying = true;
+
+        if (player)
+        {
+            text.color = playerColor;
+        }
+        else
+        {
+            text.color = himColor;
+        }
     }
 }

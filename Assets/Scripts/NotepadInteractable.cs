@@ -10,14 +10,16 @@ public class NotepadInteractable : Interactable
     bool _open;
     TMP_Text _page1;
     TMP_Text _page2;
+    AudioSource audio;
     bool read;
 
-    void Start()
+    public virtual void Start()
     {
         _notePad = UIManager.instance.notePadUI;
         _page1 = UIManager.instance.page1;
         _page2 = UIManager.instance.page2;
         _notePad.SetActive(false);
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -41,7 +43,7 @@ public class NotepadInteractable : Interactable
         }
 
         _notePad.SetActive(true);
-
+        audio.Play();
         _page1.SetText(pageOneText);
         _page2.SetText(pageTwoText);
 
